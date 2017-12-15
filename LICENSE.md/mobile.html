@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="apple-touch-icon" href="http://your.site.com/img/apple-touch-icon.png"/>
+		<meta name="apple-mobile-web-app-title" content="Name">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	</head>
+	<body>
+		<script>
+			// if standalone, rewrite href's so safari does not open when navigating
+			(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(chref=d.href).replace(e.href,"").indexOf("#")&&(!/^[a-z\+\.\-]+:/i.test(chref)||chref.indexOf(e.protocol+"//"+e.host)===0)&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone");
+			// if standalone, disable double tap and pinch zooming
+			if (window.navigator.standalone === true ){
+				document.addEventListener('gesturestart', function (e) { e.preventDefault(); });
+			}
+		</script>
+		<h1> It works!</h1>
+	</body>
+</html>
